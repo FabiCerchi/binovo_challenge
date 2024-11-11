@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="blog_blog_rule_company" model="ir.rule">
+            <field name="name">Blog by Company</field>
+            <field name="model_id" ref="model_blog_blog"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'child_of', [user.company_id.id])]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="blog_post_rule_company" model="ir.rule">
+            <field name="name">Blog Post by Company</field>
+            <field name="model_id" ref="model_blog_post"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'child_of', [user.company_id.id])]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>

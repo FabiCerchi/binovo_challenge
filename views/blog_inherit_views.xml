@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_blog_blog_form_inherit_binovo_challenge" model="ir.ui.view">
+            <field name="name">blog.blog.view.form.inherit.binovo.challenge</field>
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                <field name="subtitle" position="after">
+                    <field name="company_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_blog_blog_list_inherit_binovo_challenge" model="ir.ui.view">
+            <field name="name">blog.blog.view.list.inherit.binovo.challenge</field>
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_list"/>
+            <field name="arch" type="xml">
+                <field name="blog_post_count" position="after">
+                    <field name="company_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_blog_post_view_form_add_inherit_binovo_challenge" model="ir.ui.view">
+            <field name="name">blog.post.view.form.add.inherit.binovo.challenge</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.blog_post_view_form_add"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="company_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_blog_post_list_inherit_binovo_challenge" model="ir.ui.view">
+            <field name="name">blog.post.view.list.inherit.binovo.challenge</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_list"/>
+            <field name="arch" type="xml">
+                <field name="is_published" position="after">
+                    <field name="company_id"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
